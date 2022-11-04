@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { states } from '../../constants/states'
 import axios from "axios";
-import './Weather.css'
+
 function Weather() {
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState("");
@@ -54,25 +54,25 @@ function Weather() {
           <div className='temperature'>
             <p className="text-sm text-center font-Roboto">Temperature</p>
             <div className='flex items-center px-8'>
-              <h1 className="text-[56px] quantity font-podkova text-center">{loading ? "...." : weatherData?.temperature} °C</h1>
-              <div className='w-[4px] v-divider h-[124px] ml-12 bg-white'></div>
+              <h1 className="text-[56px] text-[50px] font-podkova text-center">{loading ? "...." : weatherData?.temperature} °C</h1>
+              <div className='w-[4px] hidden md:inline-block h-[124px] ml-12 bg-white'></div>
             </div>
-            <div className='h-[4px] h-divider w-full my-4 bg-white'></div>
+            <div className='h-[4px] inline-block md:hidden w-full my-4 bg-white'></div>
 
           </div>
           <div className='humidity'>
             <p className="text-sm text-center font-Roboto">Humidity</p>
             <div className='flex items-center px-8'>
-              <h1 className="text-[56px] quantity font-podkova">{loading ? "...." : weatherData?.humidity}</h1>
-              <div className='w-[4px] v-divider h-[124px] ml-10 bg-white'></div>
+              <h1 className="text-[56px] text-[50px] font-podkova">{loading ? "...." : weatherData?.humidity}</h1>
+              <div className='w-[4px] hidden md:inline-block h-[124px] ml-10 bg-white'></div>
             </div>
-              <div className='h-[4px] h-divider w-full md:hidden my-4 bg-white'></div>
+              <div className='h-[4px] inline-block md:hidden w-full md:hidden my-4 bg-white'></div>
           </div>
           <div className='pressure'>
             <p className="text-sm text-center font-Roboto">Pressure</p>
             <div className='flex items-center mx-10'>
-              <h1 className="text-[56px] quantity font-podkova">{loading ? "...." : weatherData?.pressure}</h1>
-              <div className='w-0 v-divider h-[124px] bg-white'></div>
+              <h1 className="text-[56px] text-[50px] font-podkova">{loading ? "...." : weatherData?.pressure}</h1>
+              <div className='w-0 hidden md:inline-block h-[124px] bg-white'></div>
 
             </div>
           </div>
