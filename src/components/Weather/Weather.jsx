@@ -73,8 +73,8 @@ function Weather() {
             <div className='flex items-center mx-10'>
               <h1 className="text-[56px] text-[50px] font-podkova">{loading ? "...." : weatherData?.pressure}</h1>
               <div className='w-0 hidden md:inline-block h-[124px] bg-white'></div>
-
             </div>
+            <div className='h-[4px] inline-block md:hidden w-full md:hidden my-4 bg-white'></div>
           </div>
         </div>
       </div>

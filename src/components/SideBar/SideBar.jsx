@@ -5,14 +5,14 @@ import { ReactComponent as WeatherIcon } from "../../assets/icons/weather.svg";
 import { Link } from "react-router-dom";
 function SideBar({ active, setActiveTab }) {
   return (
-    <div className="hidden md:inline-block flex flex-col gap-4 w-[25%] md-w-[18%] bg-white max-h-[90vh] rounded-2xl p-10 md:p-8 text-light-blue">
+    <div className="hidden md:inline-block flex flex-col gap-4 w-[18%] md-w-[18%] bg-white max-h-[90vh] rounded-2xl md:p-4 text-light-blue">
       <img src={Logo} className='image' alt="" />
       <div className="w-full h-[2px] bg-light-blue"></div>
       <ul className="flex flex-col gap-4 my-3">
         <Link
           to="/add-user"
           onClick={() => setActiveTab("add-user")}
-          className={`flex gap-2 p-3 ${
+          className={`flex flex-wrap md:justify-center lg:justify-start gap-2 p-3 ${
             active === "add-user"
               ? "text-white bg-light-blue"
               : "text-light-blue"
@@ -24,7 +24,7 @@ function SideBar({ active, setActiveTab }) {
         <Link
           to="/users"
           onClick={() => setActiveTab("users")}
-          className={`flex gap-2 p-3 ${
+          className={`flex flex-wrap md:justify-center lg:justify-start gap-2 p-3 ${
             active === "users" ? "text-white bg-light-blue" : "text-light-blue"
           } cursor-pointer rounded-2xl`}
         >
@@ -33,7 +33,7 @@ function SideBar({ active, setActiveTab }) {
         <Link
           to="/weather"
           onClick={() => setActiveTab("weather")}
-          className={`flex gap-2 p-3 ${
+          className={`flex flex-wrap md:justify-center lg:justify-start gap-2 p-3 ${
             active === "weather"
               ? "text-white bg-light-blue"
               : "text-light-blue"

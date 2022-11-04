@@ -6,7 +6,6 @@ import Weather from "../components/Weather/Weather";
 import AddUser from "../components/AddUser/AddUser";
 import { getUsers } from "../redux/actions/users";
 import { useDispatch } from "react-redux";
-import './Layout.css'
 import MobileNav from "../components/mobileNav/mobileNav";
 function Layout({ active }) {
     const dispatch = useDispatch();
@@ -22,17 +21,17 @@ function Layout({ active }) {
             <MobileNav active={activeTab} setActiveTab={setActiveTab} />
 
             {active === "add-user" ? (
-                <div className="flex flex-col w-[72%] md-w-[80%] layout gap-4">
+                <div className="flex flex-col w-[100%] md:w-[80%] layout gap-4">
                     <TopBar />
                     <AddUser />
                 </div>
             ) : active === "users" ? (
-                <div className="flex flex-col w-[72%] md-w-[80%] layout gap-4 overflow-hidden">
+                <div className="flex flex-col w-[100%] md:w-[80%] layout gap-4 overflow-hidden">
                     <TopBar />
                     <Users />
                 </div>
             ) : active === "weather" ? (
-                <div className="flex flex-col w-[72%] md-w-[80%] layout gap-4">
+                <div className="flex flex-col w-[100%] md:w-[80%] layout gap-4">
                     <TopBar />
                     <Weather />
                 </div>

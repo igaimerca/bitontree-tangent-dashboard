@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import './mobileNav.css'
 function MobileNav({ active, setActiveTab }) {
   return (
-    <div className="MobileNav flex flex-col w-[96%] fixed bottom-0 bg-white text-light-blue bg-bright-blue">
+    <div className="md:hidden flex flex-col w-[96%] fixed bottom-0 bg-white text-light-blue bg-bright-blue">
       <ul className="flex flex-row justify-around gap-4 my-3">
         <Link
           to="/add-user"

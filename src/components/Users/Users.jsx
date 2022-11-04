@@ -4,7 +4,6 @@ import SearchIcon from "../../assets/icons/search.svg";
 import AvatarIcon from "../../assets/icons/avatar.svg";
 import MenuIcon from "../../assets/icons/menu.svg";
 import Moment from "react-moment";
-import './Users.css'
 
 function Users() {
     const users = useSelector((state) => state?.users);
@@ -19,7 +18,7 @@ function Users() {
     return (
         <div>
             <h2 className="p-4 text-sm text-black">Users</h2>
-            <div className="w-full mb-[6rem] min-h-[70vh] p-6 rounded-2xl bg-white flex flex-col gap-5 overflow-y-scroll overflow-x-hidden">
+            <div className="w-full mb-[6rem] h-[70vh] p-6 rounded-2xl bg-white flex flex-col gap-5 overflow-y-scroll overflow-x-hidden">
                 <p>Search</p>
                 <div className="relative min-w-[310px] w-[45%]">
                     <input
@@ -47,7 +46,7 @@ function Users() {
                             </div>
                         ) : searchUsers && filteredUsers && filteredUsers?.length ? (
                             filteredUsers?.map((user, index) => (
-                                <div key={index} className="shadow-md min-w-fit w-[22%] card rounded-md flex gap-5 items-center justify-center px-10 py-6 bg-white">
+                                <div key={index} className="shadow-md min-w-fit md:w-[50%] w-[30%] rounded-md flex flex-wrap gap-5 items-center justify-center px-10 py-6 bg-white">
                                     <img src={AvatarIcon} alt="" />
                                     <span className="text-sm">
                                         {user?.username} <br />
@@ -57,7 +56,7 @@ function Users() {
                             ))
                         ) : (
                             users?.map((user, index) => (
-                                <div key={index} className="shadow-md min-w-fit  md:w-[45%] lg:w-[22%] card rounded-md flex gap-5 items-center justify-center px-10 py-6 bg-white">
+                                <div key={index} className="shadow-md min-w-fit w-[100%] md:w-[30%]  flex-wrap rounded-md flex gap-5 items-center justify-center px-10 py-6 bg-white">
                                     <img src={AvatarIcon} alt="" />
                                     <span className="text-sm">
                                         {user?.username} <br />

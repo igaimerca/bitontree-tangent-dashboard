@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { createUser } from "../../redux/actions/users";
 import { useDispatch } from "react-redux";
 import { states } from "../../constants/states";
-import './AddUser.css'
 function AddUser() {
     const dispatch = useDispatch();
     const [username, setUsername] = useState("");
@@ -52,7 +51,7 @@ function AddUser() {
         <div>
             <h2 className="p-4 text-sm text-black">Add User</h2>
             <div className="w-full h-auto mb-[6rem] min-h-[70vh] p-4 bg-white rounded-2xl flex items-center justify-center">
-                <form action="" className="flex flex-col gap-5 w-[80%] lg:w-[50%]">
+                <form action="" className="flex flex-col gap-5 w-[100%] md:w-[80%] lg:w-[50%]">
                     <div className="flex items-center justify-between gap-5 flex-wrap">
                         <label htmlFor="" className="w-[10%]">Username</label>
                         <input
@@ -60,12 +59,12 @@ function AddUser() {
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             placeholder="John"
-                            className="min-w-[250px] w-[80%] px-2 py-2 rounded-lg outline-none bg-lighter-gray  form-input"
+                            className="min-w-[250px] w-[100%] md:w-[80%] px-2 py-2 rounded-lg outline-none bg-lighter-gray  "
                         />
                     </div>
                     <div className="flex  items-center justify-between gap-5 flex-wrap">
                         <label htmlFor="" className="w-[10%]">Email</label>
-                        <div className="flex flex-col form-input w-[80%]">
+                        <div className="flex flex-col  w-[100%] md:w-[80%]">
                             <input
                                 type="email"
                                 placeholder="john@gmail.com"
@@ -83,14 +82,14 @@ function AddUser() {
                     </div>
                     <div className="flex items-center justify-between gap-5 flex-wrap">
                         <label htmlFor="" className="w-[10%]">Phone</label>
-                        <div className="flex flex-col form-input w-[80%] ">
+                        <div className="flex flex-col  w-[100%] md:w-[80%] ">
                             <input
                                 type="tel"
                                 value={tel}
                                 placeholder="1234567890"
                                 onChange={(e) => setTel(e.target.value)}
                                 className={`${telError && "border-2 border-light-red"
-                                    } min-w-[250px] px-3 py-2 rounded-lg outline-none bg-lighter-gray form-input`}
+                                    } min-w-[250px] px-3 py-2 rounded-lg outline-none bg-lighter-gray `}
                             />
                             {telError && (
                                 <span className="p-2 text-light-red">{telError}</span>
@@ -104,7 +103,7 @@ function AddUser() {
                             value={date}
                             onChange={(e) => setDate(e.target.value)}
                             placeholder="123456789"
-                            className="min-w-[250px] w-[80%] px-3 py-2 rounded-lg outline-none bg-lighter-gray form-input"
+                            className="min-w-[250px] w-[100%] md:w-[80%] px-3 py-2 rounded-lg outline-none bg-lighter-gray "
                         />
                     </div>
                     <div className="flex items-center justify-between gap-5 flex-wrap">
@@ -114,7 +113,7 @@ function AddUser() {
                             id=""
                             value={state}
                             onChange={(e) => setState(e.target.value)}
-                            className="min-w-[250px] w-[80%] px-3 py-2 rounded-lg outline-none bg-lighter-gray form-input"
+                            className="min-w-[250px] w-[100%] md:w-[80%] px-3 py-2 rounded-lg outline-none bg-lighter-gray "
                         >
                             {states &&
                                 states.map((state, i) => (
@@ -128,7 +127,7 @@ function AddUser() {
                         <button
                             type="submit"
                             onClick={handleSubmit}
-                            className="bg-light-blue text-white min-w-[250px] w-[80%] px-3 py-2 rounded-lg outline-none submit"
+                            className="bg-light-blue text-white min-w-[250px] w-[100%] md:w-[80%] px-3 py-2 rounded-lg outline-none submit"
                         >
                             Create user
                         </button>
