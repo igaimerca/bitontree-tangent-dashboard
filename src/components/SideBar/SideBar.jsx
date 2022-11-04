@@ -3,10 +3,9 @@ import { ReactComponent as UserIcon } from "../../assets/icons/user.svg";
 import { ReactComponent as AddUserIcon } from "../../assets/icons/addUser.svg";
 import { ReactComponent as WeatherIcon } from "../../assets/icons/weather.svg";
 import { Link } from "react-router-dom";
-import './SideBar.css'
 function SideBar({ active, setActiveTab }) {
   return (
-    <div className="hidden md:inline-block flex flex-col gap-4 w-[25%] md-w-[18%] bg-white max-h-[90vh] rounded-2xl p-10 md:p-5 text-light-blue">
+    <div className="hidden md:inline-block flex flex-col gap-4 w-[25%] md-w-[18%] bg-white max-h-[90vh] rounded-2xl p-10 md:p-8 text-light-blue">
       <img src={Logo} className='image' alt="" />
       <div className="w-full h-[2px] bg-light-blue"></div>
       <ul className="flex flex-col gap-4 my-3">
