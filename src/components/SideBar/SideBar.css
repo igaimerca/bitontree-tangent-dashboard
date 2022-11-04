@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .sidebar {
+      display: none;
+    }
+  }
+
+@media only screen and (min-width: 1050px) {
+    .sidebar {
+        @apply p-10;
+    }
+}
+
+.image{
+    max-width: 150px;
+}
