@@ -40,7 +40,7 @@ function Users() {
                     <p>Card View</p>
                     <div className="flex flex-wrap gap-3 my-3 cards">
                         {!users || users.length <= 0 ? (
-                            <div className="shadow-md w-[25%] rounded-md flex gap-5 items-center justify-center px-10 py-6 bg-white">
+                            <div className="shadow-md w-[99%] md:w-[25%] rounded-md flex gap-5 items-center justify-center px-10 py-6 bg-white">
                                 <span className="text-sm">
                                     No user created yet!
                                 </span>
